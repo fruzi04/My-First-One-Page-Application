@@ -87,7 +87,7 @@ class App extends Component{
     onFilterSelect = (filter) => {
         this.setState({filter});
     }
-
+    
     render() {
         const {data, term, filter} = this.state;
         const employees = this.state.data.length;
@@ -109,7 +109,8 @@ class App extends Component{
                     data={visibleData}
                     onDelete={this.deleteItem}
                     onToggleProp={this.onToggleProp}
-                    onToggleIncrease={this.onToggleIncrease}/>
+                    onToggleIncrease={this.onToggleIncrease}
+                    handleChange={this.handleChange}/>
                   
                 <EmployeesAddForm
                     onAdd={this.addItem}/>
